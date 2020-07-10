@@ -4,7 +4,14 @@ import passport from 'passport'
 
 class Authentication {
 
+    constructor() {
+        passport.serializeUser(function (user, done) {
+            done(null, user.id);
+        });
+        passport.deserializeUser(function (id, done) {
 
+        });
+    }
     validation() {
         const LocalStrategy = passportLocal.Strategy;
         passport.use(
@@ -15,6 +22,8 @@ class Authentication {
             })
         )
     }
+    isValid() {
 
+    }
 }
 export default Authentication;
