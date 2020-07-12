@@ -3,6 +3,8 @@ import { create, getlist, createCategory, createBikeCategory } from '../controll
 
 const myBikeRoutes = express.Router();
 
+
+// test comment 
 myBikeRoutes.post('/bike', create);
 myBikeRoutes.get('/category', createCategory);
 myBikeRoutes.get('/getlist/:id?', getlist);
